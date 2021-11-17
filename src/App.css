@@ -1,4 +1,9 @@
 /* start */
+
+h2 {
+  margin-left: 6rem;
+}
+
 .body {
   box-sizing: border-box;
   text-decoration: none;

@@ -4,6 +4,28 @@
   text-decoration: none;
 }
 
-/* test */
+.logo {
+  width: 4.5rem;
+  height: 4.5rem;
+}
 
-/* test */
+/* .missions-link {
+  display: inline !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+} */
+
+.v-line-nav {
+  height: 1rem;
+  top: 0.8rem;
+}
+
+.active {
+  text-decoration: underline !important;
+  font-weight: 550;
+}
+
+.nav-items-top {
+  height: 1.2rem;
+}

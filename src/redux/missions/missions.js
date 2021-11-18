@@ -1,21 +1,22 @@
 import axios from 'axios';
 
-const FETCH_DATA = 'space-travelers-hub/missions/FETCH-DATA';
+import * as Camel from '../modules/camelConverter';
+
+const FETCH_DATA = 'FETCH_MISSIONS_DATA';
 
 const initialState = [];
 
 export const fetchData = () => async (dispatch) => {
   const response = await axios.get('https://api.spacexdata.com/v3/missions');
-  const payload = response.data.map((e) => {
-    const { mission_id, mission_name, description } = e; //eslint-disable-line
-    const element = { mission_id, mission_name, description };
+  const payload = Camel.keysToCamel(response.data).map((e) => {
+    const { missionId, missionName, description } = e;
+    const element = { missionId, missionName, description };
     return element;
   });
   dispatch({
     type: FETCH_DATA,
     payload,
   });
-  // console.log(payload);
 };
 
 const missionsReducer = (state = initialState, action) => {

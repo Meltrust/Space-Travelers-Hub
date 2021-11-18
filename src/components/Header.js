@@ -32,13 +32,13 @@ const Header = () => (
               </NavLink>
             </li>
             <li className="nav-item me-3 border-dark">
-              <NavLink to="missions" className="nav-link  main-nav-links missions-link" activeClassName="active-link">
+              <NavLink to="missions" className="nav-link  main-nav-links missions-link">
                 Missions
               </NavLink>
             </li>
             <li className="nav-item border border-dark position-relative v-line-nav me-3" />
             <li className="nav-item">
-              <NavLink to="profile" className="nav-link  main-nav-links  " activeClassName="active-link">
+              <NavLink to="profile" className="nav-link  main-nav-links  ">
                 My profile
               </NavLink>
             </li>

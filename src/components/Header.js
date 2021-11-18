@@ -10,7 +10,7 @@ const Header = () => (
         {/* <div className="navbar-brand"></div> */}
         <div className="d-flex align-items-center">
           <img src={logo} alt="Logo" className="logo me-4" />
-          <span className="navbar-brand text-dark fs-2">Space Traveller&apos;s Hub</span>
+          <h1 className="navbar-brand text-dark fs-2">Space Traveller&apos;s Hub</h1>
         </div>
         <button
           className="navbar-toggler"

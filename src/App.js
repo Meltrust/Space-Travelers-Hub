@@ -1,8 +1,13 @@
 import './App.css';
+import Rockets from './components/Rockets';
 
 function App() {
   return (
-    <div className="container">Hello World </div>
+    <div className="container">
+      <Rockets />
+      {' '}
+    </div>
+
   );
 }
 

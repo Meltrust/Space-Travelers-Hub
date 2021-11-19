@@ -1,9 +1,5 @@
 /* start */
 
-h2 {
-  margin-left: 6rem;
-}
-
 .body {
   box-sizing: border-box;
   text-decoration: none;
@@ -20,7 +16,7 @@ h2 {
 }
 
 .active {
-  text-decoration: underline !important;
+  text-decoration: underline;
   font-weight: 550;
 }
 

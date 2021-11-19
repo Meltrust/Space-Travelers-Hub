@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  Table, Container,
-} from 'react-bootstrap';
+import { Table, Container } from 'react-bootstrap';
 
 import { fetchData } from '../redux/missions/missions';
 import Mission from './Mission';
@@ -31,8 +29,10 @@ const Missions = () => {
           {missionList.map((mission) => (
             <Mission
               key={mission.missionId}
+              id={mission.missionId}
               name={mission.missionName}
               description={mission.description}
+              reserved={mission.reserved}
             />
           ))}
         </tbody>

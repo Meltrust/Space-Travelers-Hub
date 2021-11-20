@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Rocket from './Rocket';
 import { fetchRockets } from '../redux/rockets/rockets';
 
-export default function Rockets() {
+const Rockets = () => {
   const dispatch = useDispatch();
   const rocketData = useSelector((state) => state.rocketsReducer);
 
@@ -40,4 +40,6 @@ export default function Rockets() {
     </div>
 
   );
-}
+};
+
+export default Rockets;

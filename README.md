@@ -28,6 +28,8 @@ Real live data from the SpaceX API. A web application built with React and Redux
 
 ## Live demo
 
+https://meltrust.github.io/Space-Travelers-Hub/
+
 ## Made with
 
 - Javascript

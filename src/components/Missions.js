@@ -16,7 +16,7 @@ const Missions = () => {
 
   return (
     <Container>
-      <Table className="mx-auto" striped bordered>
+      <Table className="mx-auto" data-testid="missionsTable" striped bordered>
         <thead>
           <tr>
             <th><h3>Mission</h3></th>

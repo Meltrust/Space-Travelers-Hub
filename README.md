@@ -2,8 +2,9 @@
 
 > A React/Redux app to get into commercial and scientific space missions.
 
-<!-- ![screenshot](./app_screenshot.png) -->
-<!-- ![screenshot](./app_screenshot_mobile.png) -->
+<!-- ![screenshot](./assets/app_screenshot_rockets.png) -->
+<!-- ![screenshot](./assets/app_screenshot_missions.png) -->
+<!-- ![screenshot](./assets/app_screenshot_profile.png) -->
 
 Real live data from the SpaceX API. A web application built with React and Redux for a company that provides commercial and scientific space travel services. The application allows the users to book rockets and join their selected space missions.
 

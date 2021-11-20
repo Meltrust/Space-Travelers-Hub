@@ -6,7 +6,7 @@ import {
 
 const Rocket = (
   {
-    name, description, flickrImage,
+    id, name, description, flickrImage, reserved, toggleRocketBooking,
   },
 ) => (
   <ListGroup.Item className="bg-light  mb-1">
@@ -17,26 +17,41 @@ const Rocket = (
       <Col>
         <h3>{name}</h3>
 
-        <span>
-          <Badge bg="info" pill>
-            Reserved
-          </Badge>
-          {' '}
-        </span>
+        {reserved && (
+          <span>
+            <Badge bg="info" pill>
+              Reserved
+            </Badge>
+            {' '}
+          </span>
+        )}
+
         {description}
         <br />
         <br />
-        <Button className="reserve-button rounded" variant="primary">Reserve Rocket</Button>
+        <Button
+          className="reserve-button rounded"
+          variant={reserved ? 'secondary' : 'primary'}
+          onClick={() => toggleRocketBooking(id)}
+          reserved={reserved}
+        >
+          {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+        </Button>
       </Col>
     </Row>
   </ListGroup.Item>
-
 );
 
+Rocket.defaultProps = {
+  reserved: false,
+};
 Rocket.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   flickrImage: PropTypes.string.isRequired,
+  reserved: PropTypes.bool,
+  id: PropTypes.number.isRequired,
+  toggleRocketBooking: PropTypes.func.isRequired,
 };
 
 export default Rocket;

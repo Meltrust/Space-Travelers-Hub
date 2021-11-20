@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Rocket from './Rocket';
-import { fetchRockets } from '../redux/rockets/rockets';
+import { fetchRockets, toggleReserveRocket } from '../redux/rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -20,6 +20,10 @@ const Rockets = () => {
     return <h2>{rocketData.error}</h2>;
   }
 
+  const toggleRocketBooking = (id) => {
+    dispatch(toggleReserveRocket(id));
+  };
+
   return (
 
     <div className="mb-5 col">
@@ -33,7 +37,9 @@ const Rockets = () => {
                      name={rocket.rocketName}
                      description={rocket.description}
                      flickrImage={rocket.flickrImage}
+                     toggleRocketBooking={toggleRocketBooking}
                      className="row"
+                     reserved={rocket.rocketReserved}
                    />
                  ),
                )}

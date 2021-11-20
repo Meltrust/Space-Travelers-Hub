@@ -27,3 +27,7 @@
 .list-group-item {
   border: none !important;
 }
+
+.reserve-button {
+  height: 2.5rem;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Col, Image, ListGroup, Row,
+  Col, Image, ListGroup, Row, Badge, Button,
 } from 'react-bootstrap';
 
 const Rocket = (
@@ -16,9 +16,17 @@ const Rocket = (
       </Col>
       <Col>
         <h3>{name}</h3>
+
+        <span>
+          <Badge bg="info" pill>
+            Reserved
+          </Badge>
+          {' '}
+        </span>
         {description}
         <br />
         <br />
+        <Button className="reserve-button rounded" variant="primary">Reserve Rocket</Button>
       </Col>
     </Row>
   </ListGroup.Item>

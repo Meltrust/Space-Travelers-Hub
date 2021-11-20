@@ -6,6 +6,8 @@ import * as Camel from '../modules/camelConverter';
 const FETCH_ROCKETS_REQUEST = 'FETCH_ROCKETS_REQUEST';
 const FETCH_ROCKETS_SUCCESS = 'FETCH_ROCKETS_SUCCESS';
 const FETCH_ROCKETS_FAILURE = 'FETCH_ROCKETS_FAILURE';
+const TOGGLE_ROCKET_RESERVATION = 'TOGGLE_ROCKET_RESERVATION';
+// const CANCEL_ROCKET = 'CANCEL_ROCKET';
 
 // Initial state
 const initialState = {
@@ -27,6 +29,11 @@ export const fetchRocketsSuccess = (rockets) => ({
 export const fetchRocketsFailure = (error) => ({
   type: FETCH_ROCKETS_FAILURE,
   payload: error,
+});
+
+export const toggleReserveRocket = (reserveId) => ({
+  type: TOGGLE_ROCKET_RESERVATION,
+  payload: reserveId,
 });
 
 // Fetch rockets function
@@ -79,6 +86,16 @@ const rocketsReducer = (state = initialState, action) => {
         rockets: [],
         error: action.payload,
       };
+
+    case TOGGLE_ROCKET_RESERVATION:
+
+      return {
+        ...state,
+        rockets: state.rockets.map((rocket) => (rocket.id !== action.payload ? rocket
+          : { ...rocket, rocketReserved: !rocket.rocketReserved })),
+      };
+
+      // return newState;
 
     default: return state;
   }

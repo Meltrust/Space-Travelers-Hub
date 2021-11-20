@@ -1,5 +1,3 @@
-/* start */
-
 .body {
   box-sizing: border-box;
   text-decoration: none;
@@ -22,4 +20,12 @@
 
 .nav-items-top {
   height: 1.2rem;
+}
+
+.main-rockets-items {
+  border: none !important;
+}
+
+.reserve-button {
+  height: 2.5rem;
 }

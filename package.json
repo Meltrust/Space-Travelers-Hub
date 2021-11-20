@@ -1,5 +1,6 @@
 {
-  "name": "space-travellers-hub",
+  "homepage":"https://meltrust.github.io/Space-Travelers-Hub/",
+  "name": "space-travelers-hub",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Rocket from './Rocket';
+import { fetchRockets, toggleReserveRocket } from '../redux/rockets/rockets';
 
-import { fetchRockets } from '../redux/rockets/rockets';
-
-export default function Rockets() {
+const Rockets = () => {
   const dispatch = useDispatch();
   const rocketData = useSelector((state) => state.rocketsReducer);
 
@@ -20,24 +20,32 @@ export default function Rockets() {
     return <h2>{rocketData.error}</h2>;
   }
 
+  const toggleRocketBooking = (id) => {
+    dispatch(toggleReserveRocket(id));
+  };
+
   return (
-    <div>
-      <h2>Rockets</h2>
-      <div>
-        {rocketData // conditional
+
+    <div className="mb-5 col">
+      {rocketData // conditional
            && rocketData.rockets // conditional
                && rocketData.rockets.map(
                  (rocket) => (
-                   <div key={rocket.id}>
-                     <p>{rocket.id}</p>
-                     <p>{rocket.rocketName}</p>
-                     <p>{rocket.description}</p>
-                     <p>{rocket.flickrImage}</p>
-                   </div>
+                   <Rocket
+                     key={rocket.id}
+                     id={rocket.id}
+                     name={rocket.rocketName}
+                     description={rocket.description}
+                     flickrImage={rocket.flickrImage}
+                     toggleRocketBooking={toggleRocketBooking}
+                     className="row"
+                     reserved={rocket.rocketReserved}
+                   />
                  ),
                )}
-      </div>
     </div>
 
   );
-}
+};
+
+export default Rockets;

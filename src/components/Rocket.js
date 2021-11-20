@@ -9,7 +9,7 @@ const Rocket = (
     id, name, description, flickrImage, reserved, toggleRocketBooking,
   },
 ) => (
-  <ListGroup.Item className="bg-light  mb-1">
+  <ListGroup.Item className="bg-light  mb-1 main-rockets-items">
     <Row>
       <Col xs={2} style={{ width: 'fit-content' }}>
         <Image width="300" height="180" src={flickrImage} rounded />

@@ -1,5 +1,3 @@
-/* start */
-
 .body {
   box-sizing: border-box;
   text-decoration: none;
@@ -24,7 +22,7 @@
   height: 1.2rem;
 }
 
-.list-group-item {
+.main-rockets-items {
   border: none !important;
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
+import Rocket from './Rocket';
 import { fetchRockets } from '../redux/rockets/rockets';
 
 export default function Rockets() {
@@ -21,22 +21,22 @@ export default function Rockets() {
   }
 
   return (
-    <div>
-      <h2>Rockets</h2>
-      <div>
-        {rocketData // conditional
+
+    <div className="mb-5 col">
+      {rocketData // conditional
            && rocketData.rockets // conditional
                && rocketData.rockets.map(
                  (rocket) => (
-                   <div key={rocket.id}>
-                     <p>{rocket.id}</p>
-                     <p>{rocket.rocketName}</p>
-                     <p>{rocket.description}</p>
-                     <p>{rocket.flickrImage}</p>
-                   </div>
+                   <Rocket
+                     key={rocket.id}
+                     id={rocket.id}
+                     name={rocket.rocketName}
+                     description={rocket.description}
+                     flickrImage={rocket.flickrImage}
+                     className="row"
+                   />
                  ),
                )}
-      </div>
     </div>
 
   );

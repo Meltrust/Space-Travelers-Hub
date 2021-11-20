@@ -23,3 +23,7 @@
 .nav-items-top {
   height: 1.2rem;
 }
+
+.list-group-item {
+  border: none !important;
+}

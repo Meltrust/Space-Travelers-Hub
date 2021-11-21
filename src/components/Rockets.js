@@ -26,7 +26,7 @@ const Rockets = () => {
 
   return (
 
-    <div className="mb-5 col">
+    <div className="mb-5 col" data-testid="rocketsList">
       {rocketData // conditional
            && rocketData.rockets // conditional
                && rocketData.rockets.map(

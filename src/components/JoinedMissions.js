@@ -9,7 +9,7 @@ const JoinedMissions = () => {
   const reservedMissions = missionList.filter((mission) => mission.reserved === true);
 
   return (
-    <Container>
+    <Container data-testid="joinedMissions">
       <ListGroup>
         <h2>My missions</h2>
         {reservedMissions.map((mission) => (

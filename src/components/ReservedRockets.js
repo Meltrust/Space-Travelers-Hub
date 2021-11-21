@@ -8,7 +8,7 @@ const ReservedRockets = () => {
   const reservedRockets = rocketData.rockets.filter((rocket) => rocket.rocketReserved === true);
 
   return (
-    <Container>
+    <Container data-testid="joinedRockets">
       <ListGroup>
         <h2>My Rockets</h2>
         {reservedRockets.map((rocket) => (

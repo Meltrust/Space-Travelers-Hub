@@ -1,13 +1,34 @@
-# Reader's Paradise
+# Space Traveller's Hub
+
+<br/>
 
 > A React/Redux app to get into commercial and scientific space missions.
 
-<!-- ![screenshot](./app_screenshot.png) -->
-<!-- ![screenshot](./app_screenshot_mobile.png) -->
+<br/>
+
+## Rockets view
+
+![screenshot](./assets/app_screenshot_rockets.png)
+
+<br/>
+
+## Missions view
+
+![screenshot](./assets/app_screenshot_missions.png)
+
+<br/>
+
+## Joined Rockets and Missions view
+
+![screenshot](./assets/app_screenshot_profile.png)
+
+<br/>
 
 Real live data from the SpaceX API. A web application built with React and Redux for a company that provides commercial and scientific space travel services. The application allows the users to book rockets and join their selected space missions.
 
 ## Live demo
+
+[Visit Space Traveler's hub!](https://meltrust.github.io/Space-Travelers-Hub/)
 
 ## Made with
 

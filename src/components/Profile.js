@@ -7,7 +7,7 @@ import ReservedRockets from './ReservedRockets';
 const Profile = () => (
   <Container className="d-flex">
     <JoinedMissions />
-    <ReservedRockets />
+    <ReservedRockets data-testid="joinedRockets" />
   </Container>
 );
 

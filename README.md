@@ -19,9 +19,9 @@
     <br />
     <br />
     -
-    <a href="https://github.com/Meltrust/Space-Travelers-Hub">Report a Bug</a>
+    <a href="https://github.com/Meltrust/Space-Travelers-Hub/issues">Report a Bug</a>
     -
-    <a href="https://github.com/Meltrust/Space-Travelers-Hub">Request a Feature</a>
+    <a href="https://github.com/Meltrust/Space-Travelers-Hub/issues">Request a Feature</a>
     -
   </p>
 </p>
